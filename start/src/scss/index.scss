@@ -1,0 +1,107 @@
+@import "common.scss";
+@import "_minix.scss";
+.wrapper {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(100px);
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    #list {
+        width: 100%;
+        height: pxTorem(100px);
+        @include box_flex;
+        li {
+            width: 25%;
+            height: 100%;
+            @include box_flex;
+            @include direction(column);
+            @include justify;
+            @include align;
+            font-size: pxTorem(16px);
+        }
+    }
+    .boxAll {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        div {
+            width: 100%;
+            position: relative;
+            ol {
+                width: 100%;
+                li {
+                    width: 100%;
+                    height: pxTorem(200px);
+                    // background: pink;
+                    p {
+                        width: 100%;
+                        height: pxTorem(50px);
+                        img {
+                            width: pxTorem(20px);
+                            height: 80%;
+                        }
+                    }
+                    .content {
+                        width: 100%;
+                        height: pxTorem(60px);
+                        font-size: pxTorem(20px);
+                    }
+                    .imgs {
+                        width: 80%;
+                        height: pxTorem(120px);
+                    }
+                }
+            }
+            .active {
+                width: 100%;
+                @include box_flex;
+                @include flexWrap;
+                li {
+                    width: 50%;
+                }
+            }
+            #pullUp,
+            #pullDown {
+                width: 100%;
+                height: pxTorem(44px);
+                background: #ccc;
+                position: absolute;
+                left: 0;
+            }
+            #pullUp {
+                bottom: pxTorem(-44px);
+            }
+            #pullDown {
+                top: pxTorem(-44px);
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(80px);
+    @include box_flex;
+    dl {
+        width: 25%;
+        height: 100%;
+        @include box_flex;
+        @include direction(column);
+        @include justify;
+        @include align;
+    }
+}
